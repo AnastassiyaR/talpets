@@ -1,0 +1,236 @@
+/* Основной контейнер страницы */
+.profilepage-container {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+/* Контейнер для контента */
+.profile-content {
+    display: flex;
+    flex: 1;
+    position: relative;
+}
+
+/* информация */
+.info-container {
+    margin-top: 70px; /* Отступ сверху для визуального отделения */
+    display: flex;
+    flex-direction: column;
+}
+
+.profile-text {
+    display: flex;
+    flex-direction: row;
+    align-items: center; /* Выравнивание по центру по вертикали */
+    justify-content: center;
+}
+
+
+.information {
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    display: block;
+    font-size:25px; /* Используйте vw для адаптивного размера шрифта */
+    font-family: Verdana; /* Добавьте запасной шрифт */
+    font-weight: bold;
+    text-align: center;
+    margin-left: 30px;
+}
+
+.profile-edit-container {
+    font-family: Verdana, sans-serif;
+    position: absolute;
+    bottom: 200px;
+    right: 160px;
+}
+
+.edit {
+  display: flex;
+  align-items: center;
+}
+
+.edit-text {
+    color: #000000;
+    margin-right: 8px;
+}
+
+.edit_icon {
+    width: 16px;
+    height: 16px;
+    transition: filter 0.3s;
+}
+
+/* Новый контейнер для кнопки SIGN OUT */
+.sign-out-container {
+    position: absolute;
+    right: 60px;
+    top: 30px;
+    font-family: Verdana, sans-serif;
+    font-size: 20px;
+    font-weight: lighter;
+    z-index: 10; /* Добавьте, если нужно, чтобы контейнер был на переднем плане */
+}
+
+/* Кнопка SIGN OUT */
+.sign-out {
+    color: #000; /* Цвет текста */
+    cursor: pointer; /* Курсор при наведении */
+    transition: color 0.3s ease; /* Плавное изменение цвета */
+}
+
+/* При наведении на кнопку */
+.sign-out:hover {
+    color: #ffb637; /* Цвет при наведении */
+}
+
+.name-text {
+    display: flex;
+    flex-direction: row;
+}
+.quote-image {
+    display: block;
+    width: 50px; /* Ширина изображения */
+    height: 64px; /* ысота изображения */
+    background-image: url('./src/assets/paws.png'); /* Путь к изображению */
+}
+
+.vector {
+    position: absolute;
+    right: 99px; /* Ширина изображения */
+    bottom: 70px; /* ысота изображения */
+    background-image: url('./src/assets/Vector.png'); /* Путь к изображению */
+    width: 30px; /* Ширина изображения */
+    height: 30px; /* ысота изображения */
+}
+/* квадраты */
+.profile-value {
+    display: flex;
+    gap: 10px;
+    margin-top: 64px;
+    margin-left: 50px;
+    margin-bottom: 104px;
+}
+
+.profile {
+    display: flex; /* Убедитесь, что элементы внутри профиля также используют flexbox */
+    align-items: flex-start; /* Выравнивание по вертикали к верхней части */
+    justify-content: flex-start; /* Выравнивание по горизонтали к левому краю */
+    width: 500px;
+    height: 400px;
+    background-color: #ffffff;
+    padding: 20px; /* Добавляем отступы, чтобы текст не прилипал к краям */
+    border-radius: 10px;
+}
+
+.info {
+    font-family: "Baloo Tammudu";
+    font-weight: bold;
+    font-size: 25px; /* Размер шрифта */
+    line-height: 2.5; /* Высота строки для читаемости */
+    color: #000000; /* Цвет текста */
+    display: flex;
+    flex-direction: column; /* Если у вас несколько строк текста, используйте колонку */
+}
+
+.picture {
+    width: 450px;
+    background-color: black;
+    height: 450px;
+    display: flex;
+    background-image: url('./src/assets/Berta.png');
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+@media (max-width: 1120px) {
+    .picture {
+        width: 350px;
+        height: 350px;
+    }
+    .name-text {
+        margin-right: 200px;
+    }
+}
+
+@media (max-width: 1000px) {
+    .picture {
+        width: 300px;
+        height: 300px;
+    }
+    .info {
+        font-size: 20px; /* Font size */
+    }
+    .name-text {
+        margin-right: 200px;
+    }
+
+}
+
+@media (max-width: 890px) {
+    .picture {
+        width: 300px;
+        height: 300px;
+    }
+
+    .profile-value {
+    margin-left: 20px;
+    display: flex;
+    flex-direction: column;
+    }
+    .name-text {
+        margin-right: 200px;
+    }
+}
+/* Скрытая кнопка по умолчанию */
+.profile-button-container {
+    display: none;
+}
+
+.profile-button {
+    background-color: #ffb637; /* Основной фон кнопки */
+    color: #100f0f; /* Белый текст */
+    padding: 6px 16px; /* Отступы */
+    border: none; /* Без границ */
+    border-radius: 5px; /* Округленные углы */
+    font-size: 11px; /* Размер шрифта */
+    font-family: 'Verdana', sans-serif;
+    font-weight: bold; /* Жирный шрифт */
+    cursor: pointer; /* Указатель курсора при наведении */
+    transition: background-color 0.3s ease; /* Плавное изменение фона */
+}
+
+.profile-button:hover {
+    background-color: #dddddd; /* Цвет фона при наведении */
+}
+
+
+/* Стили для отображения кнопки на мобильных устройствах */
+@media (max-width: 768px) {
+    .profile-button-container {
+        display: block; /* Показываем кнопку на мобильных устройствах */
+        position: absolute;
+        top: 10px;
+        left: 10px;
+        z-index: 100;
+    }
+
+    /* ProfileBar скрыта по умолчанию на мобильных устройствах */
+    .profile-content .profile-bar {
+        display: none;
+    }
+
+    /* Показываем ProfileBar, когда оно открыто (с классом show) */
+    .profile-content .profile-bar.show {
+        display: block;
+    }
+}
+
+/* На больших экранах ProfileBar всегда отображается */
+@media (min-width: 769px) {
+    .profile-content .profile-bar {
+        display: block; /* На больших экранах ProfileBar всегда видим */
+    }
+}
+
