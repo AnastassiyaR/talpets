@@ -1,7 +1,8 @@
 // SignupBlank.jsx
 import './SignupBlank.css';
+import React from "react";
 
-function SignupBlank() {
+function SignupBlank({onPageChange}) {
     return (
         <div className="container">
             <form className="form">
@@ -26,7 +27,9 @@ function SignupBlank() {
                 </div>
 
                 <div className="button1-container">
-                    <button type="button" className="signup1-button">SIGN UP</button>
+                    <button type="button" className="signup1-button" onClick={() => onPageChange("MainPage")}>
+                        SIGN UP
+                    </button>
                 </div>
             </form>
         </div>
