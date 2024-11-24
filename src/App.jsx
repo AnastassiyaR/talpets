@@ -3,7 +3,7 @@ import MainPage from "./MainPage.jsx";
 import PaymentPage from "./PaymentPage.jsx";
 import ProfilePage from './ProfilePage.jsx';
 import Signup from "./Signup.jsx";
-
+import './App.css'; // Импортируйте стили, если необходимо
 
 function App() {
   const [currentPage, setCurrentPage] = useState("Main"); // Состояние для отслеживания текущей страницы
