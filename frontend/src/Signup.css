@@ -1,0 +1,42 @@
+html, body {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden;
+}
+.signup-container {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh; /* Минимальная высота 100% */
+}
+.Signup {
+    font-family: 'Verdana', sans-serif;;
+    color: white;
+    font-size: 60px;
+    margin-top: 55px;
+    text-align: center;
+    position: relative; /* Позиционирование текста для наложения на изображения */
+    z-index: 2; /* Устанавливаем высокий z-index для текста */
+}
+.background {
+    flex: 1; /* Основной контент занимает всё доступное пространство */
+    background: linear-gradient(to bottom, #342C60, #4CBCD0);
+    position: relative; /* Позволяет позиционировать дочерние элементы */
+}
+/* margin-top влияет на расположение других элементов, а top — нет. И TOP Используется с position: absolute;*/
+
+.image-holder1 {
+    flex: 1 1 auto;
+    padding: 0 0 0 0;
+}
+
+.annemari-image {
+    position: absolute; /* Позволяет свободно размещать изображение */
+    width: 40%; /* Установите ширину в процентах для отзывчивости */
+    display: block;
+    top: auto; /* Расположите на 10% высоты родительского элемента */
+    bottom: 0;
+    right: 60%; /* Расположите по центру по горизонтали */
+    height: auto; /* Сохраняет пропорции */
+    opacity: 0.5;
+}

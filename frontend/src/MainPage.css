@@ -1,0 +1,191 @@
+/* Контейнер для всей страницы */
+html, body {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+}
+
+.mainpage-container {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+.cats {
+    display: flex;
+    flex-direction: row; /* Изменяем на row для горизонтального расположения */
+    align-items: center; /* Выравнивание по вертикали */
+    justify-content: center; /* Центрирование по горизонтали */
+    gap: 70px;
+}
+
+.container {
+    display: flex;
+    flex-direction: row; /* Изменяем на row для горизонтального расположения */
+    align-items: center; /* Выравнивание по вертикали */
+    justify-content: center; /* Центрирование по горизонтали */
+    gap: 70px;
+}
+
+.cats-container {
+    display: flex;
+    justify-content: center; /* Центрирует квадраты */
+    margin-bottom: 20px;
+}
+
+
+
+.cat {
+    width: 1040px; /* Максимальная ширина */
+    height: 650px; /* Максимальная высота */
+    background-color: transparent; /* Цвет фона */
+    color: #ffffff; /* Цвет текста */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: transform 0.3s; /* Плавный переход для эффектов наведения */
+    text-decoration: none; /* Убирает подчеркивание для ссылки */
+}
+
+.square-container {
+    width: 300px; /* Установите желаемую ширину контейнера */
+    height: 300px; /* Установите желаемую высоту контейнера */
+    display: flex; /* Используем flexbox для выравнивания содержимого */
+    justify-content: center; /* Центрируем по горизонтали */
+    align-items: center; /* Центрируем по вертикали */
+    overflow: hidden; /* Скрываем часть изображения, если оно больше контейнера */
+    transition: transform 0.3s; /* Плавный переход для эффектов наведения */
+}
+.square-container:hover {
+    transform: translateY(-5px); /* Эффект при наведении */
+    box-shadow: 0 8px 16px rgba(18, 32, 122, 0.3); /* Усиленная тень при наведении */
+}
+
+.square-picture-container {
+    max-width: 100%; /* Ограничиваем ширину изображения до 100% контейнера */
+    max-height: 100%; /* Ограничиваем высоту изображения до 100% контейнера */
+    object-fit: cover; /* Обеспечивает заполнение контейнера, сохраняя пропорции */
+}
+
+
+
+
+.taltech {
+    background-image: url('./assets/racket.png');
+    background-size: cover;
+}
+.iaib {
+    background-image: url('./assets/INIT.png');
+    background-size: cover;
+}
+.e-pood {
+    background-image: url('./assets/e-pood.png');
+    background-size: cover;
+}
+
+.shop {
+    background-image: url('./assets/catsshopping.png');
+    background-size: cover;
+}
+
+.square:hover {
+    transform: translateY(-5px); /* Эффект при наведении */
+    box-shadow: 0 8px 16px rgba(0, 56, 248, 0.3); /* Усиленная тень при наведении */
+}
+
+
+/* Убираем подчеркивание для всех ссылок */
+a {
+    text-decoration: none; /* Убирает подчеркивание в теге <a> */
+}
+
+.points {
+    text-align: center; /* Центрирует текст внутри элемента */
+    color: #1a4468; /* Устанавливает цвет текста */
+    font-family: Verdana;
+    font-size: 20px;
+}
+
+.cat:hover {
+    transform: translateY(-5px); /* Эффект при наведении */
+    box-shadow: 0 8px 16px rgba(122, 18, 51, 0.3); /* Усиленная тень при наведении */
+}
+
+.circles {
+    padding: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row;
+    gap: 64px;
+    margin-top: 20px;
+}
+
+.circle {
+    width: 20px; /* Ширина круга */
+    height: 20px; /* Высота круга */
+    background-color: #342B60; /* Цвет круга */
+    border-radius: 50%; /* Делает элемент круглым */
+}
+
+.circles,
+.container {
+    margin-bottom: 50px;
+}
+
+@media (max-width: 1080px) {
+    .square-container {
+        width: 250px;
+        height: 250px;
+    }
+    .cat {
+        width: 890px; /* Максимальная ширина */
+        height: 600px; /* Максимальная высота */
+    }
+}
+
+@media (max-width: 930px) {
+    .square-container {
+        width: 200px;
+        height: 200px;
+    }
+    .cat {
+        width: 740px; /* Максимальная ширина */
+        height: 500px; /* Максимальная высота */
+    }
+}
+
+@media (max-width: 770px) {
+    .square-container {
+        width: 150px;
+        height: 150px;
+        gap: 70px;
+    }
+    .container {
+        gap: 60px;
+    }
+    .cat {
+        width: 570px; /* Максимальная ширина */
+        height: 350px; /* Максимальная высота */
+    }
+    .shop {
+        background-size: 120%;
+    }
+}
+
+@media (max-width: 600px) {
+    .container {
+        flex-direction: column;
+    }
+    .square-container {
+        width: 250px;
+        height: 250px;
+    }
+    .cat {
+        width: 350px; /* Максимальная ширина */
+        height: 240px; /* Максимальная высота */
+    }
+    .shop {
+        background-size: 130%;
+    }
+}

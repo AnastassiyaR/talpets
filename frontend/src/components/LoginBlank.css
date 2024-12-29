@@ -1,0 +1,130 @@
+form {
+    margin: 60px auto; /* Отступ сверху и авто для центрирования по горизонтали */
+    width: 90%; /* Ширина формы на 90% от родителя, адаптивная */
+    max-width: 500px; /* Максимальная ширина формы */
+    background: transparent; /* Фон формы */
+    padding: 15px; /* Отступы внутри формы */
+    box-sizing: border-box; /* Учитываем padding в общей ширине */
+    display: flex; /* Используем flexbox для центрирования содержимого */
+    flex-direction: column; /* Устанавливаем направление колонки */
+    align-items: center; /* Центрируем содержимое по горизонтали */
+}
+
+input::placeholder{
+    color: white;
+}
+
+.input-field {
+    width: 470px; /* Ширина 100% */
+    padding: 10px; /* Внутренние отступы */
+    background: transparent; /* Прозрачный фон */
+    border: 2px solid #ccc; /* Цвет границы */
+    border-radius: 5px; /* Скругление углов */
+    color: white; /* Цвет текста */
+    font-size: 16px; /* Размер шрифта */
+}
+
+/* Остальные стили остаются прежними */
+
+.email-container,
+.password-container {
+    position: relative; /* Устанавливаем относительное позиционирование для контейнера */
+    margin-bottom: 20px; /* Отступ между полями */
+    border-radius: 5px; /* Скругление углов */
+    padding: 10px; /* Отступы внутри контейнера */
+    background: transparent; /* Прозрачный фон контейнера */
+}
+
+.password-container,
+.checkbox-container {
+    margin-bottom: 5px; /* Отступ между элементами */
+}
+
+.email-label,
+.password-label {
+    position: absolute; /* Абсолютное позиционирование для меток */
+    left: 20px; /* Отступ от левой границы */
+    top: 3px; /* Установка метки над полем ввода */
+    color: white; /* Цвет текста */
+    font-size: 14px; /* Размер шрифта */
+    background-color: black; /* Фон для меток */
+    padding: 0 5px; /* Отступы вокруг меток */
+}
+
+
+.checkbox-input {
+    margin-right: 10px; /* Отступ справа для чекбокса */
+}
+
+.button-container {
+    display: flex;
+    justify-content: center; /* Центрируем кнопки по горизонтали */
+    margin-top: 20px; /* Отступ сверху */
+}
+
+.signup-button,
+.login-button {
+    background-color: #342B60; /* Цвет фона кнопок */
+    color: white; /* Цвет текста */
+    border: 2px solid transparent; /* Убираем границу по умолчанию */
+    padding: 8px; /* Отступ */
+    border-radius: 8px; /* Скругление углов кнопок */
+    font-size: 30px; /* Размер шрифта для кнопок */
+    width: 200px; /* Ширина кнопок */
+    font-family: Verdana, sans-serif; /* Шрифт кнопок */
+    font-weight: bold; /* Жирный шрифт */
+    margin: 10px; /* Общий отступ вокруг кнопок */
+    text-align: center; /* Центрирование текста внутри кнопок */
+}
+
+.login-button:hover {
+  transform: scale(1.1); /* Легкое увеличение иконки при наведении */
+}
+
+.login-button:focus {
+    outline: none;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.5);
+}
+
+.signup-button:hover {
+  transform: scale(1.1); /* Легкое увеличение иконки при наведении */
+}
+
+.signup-button:focus {
+    outline: none;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.5);
+}
+
+
+@media (max-width: 510px) {
+    .input-field {
+         width: 440px; /* Ширина 100% */
+    }
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+@keyframes fadeOut {
+    from {
+        opacity: 1;
+    }
+    to {
+        opacity: 0;
+    }
+}
+
+.error-message {
+    color: red; /* Change to your desired color */
+    font-size: 14px; /* Change to your desired font size */
+    font-family: Verdana, sans-serif; /* Change to your desired font family */
+    margin-top: 10px;
+    animation: fadeIn 0.5s ease-in-out, fadeOut 0.5s ease-in-out 3s;
+    animation-fill-mode: forwards;
+}

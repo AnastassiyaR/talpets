@@ -1,0 +1,77 @@
+html, body {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+}
+
+.payment-container {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    position: relative;
+}
+
+.content {
+    flex: 1; /* Основной контент занимает всё доступное пространство */
+    max-width: 500px;
+    margin: auto; /* Центрирует блок по горизонтали */
+    display: flex; /* Добавлено для вертикального центрирования */
+    flex-direction: column; /* Вертикальное расположение элементов */
+    justify-content: center; /* Центрирует содержимое по вертикали */
+    align-items: center; /* Центрирует содержимое по горизонтали */
+}
+
+.buy-button {
+    background-color: #ffae1f; /* Цвет фона кнопок */
+    color: #100f0f; /* Цвет текста */
+    border: 2px solid transparent; /* Убираем границу по умолчанию */
+    padding: 8px; /* Отступ */
+    border-radius: 8px; /* Скругление углов кнопок */
+    font-size: 30px; /* Размер шрифта для кнопок */
+    width: 200px; /* Ширина кнопок */
+    font-family: Verdana, sans-serif; /* Шрифт кнопок */
+    font-weight: bold; /* Жирный шрифт */
+    margin: 30px; /* Общий отступ вокруг кнопок */
+    text-align: center; /* Центрирование текста внутри кнопок */
+    cursor: pointer; /* Указатель при наведении */
+}
+
+.buy-button:hover {
+    transform: scale(1.1); /* Slight scale effect on hover */
+}
+
+/* Анимация появления уведомления */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+/* Анимация исчезновения уведомления */
+@keyframes fadeOut {
+    from {
+        opacity: 1;
+    }
+    to {
+        opacity: 0;
+    }
+}
+
+/* Стиль для кнопки */
+.buy-button {
+    background-color: #ffae1f; /* Цвет фона кнопок */
+    color: #100f0f; /* Цвет текста */
+    border: 2px solid transparent; /* Убираем границу по умолчанию */
+    padding: 8px; /* Отступ */
+    border-radius: 8px; /* Скругление углов кнопок */
+    font-size: 30px; /* Размер шрифта для кнопок */
+    width: 200px; /* Ширина кнопок */
+    font-family: Verdana, sans-serif; /* Шрифт кнопок */
+    font-weight: bold; /* Жирный шрифт */
+    margin: 30px; /* Общий отступ вокруг кнопок */
+    text-align: center; /* Центрирование текста внутри кнопок */
+    cursor: pointer; /* Указатель при наведении */
+}

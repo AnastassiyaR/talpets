@@ -1,0 +1,44 @@
+html, body {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+}
+.login-container {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh; /* Минимальная высота 100% */
+}
+.Login {
+    font-family: 'Verdana', sans-serif;;
+    color: white;
+    font-size: 50px;
+    margin-top: 80px;
+    text-align: center;
+    position: relative; /* Позиционирование текста для наложения на изображения */
+    z-index: 2; /* Устанавливаем высокий z-index для текста */
+}
+.background {
+    flex: 1; /* Основной контент занимает всё доступное пространство */
+    background: linear-gradient(to bottom, #342C60, #4CBCD0);
+    position: relative; /* Позволяет позиционировать дочерние элементы */
+}
+/* margin-top влияет на расположение других элементов, а top — нет. И TOP Используется с position: absolute;*/
+
+.tuhkur-image1 {
+    position: absolute; /* Позволяет свободно размещать изображение */
+    top: 15%; /* Расположите на 10% высоты родительского элемента */
+    width: 30%; /* Установите ширину в процентах для отзывчивости */
+    opacity: 0.5; /* Устанавливает прозрачность */
+    display: block;
+}
+
+.tuhkur-image2 {
+    position: absolute; /* Позволяет свободно размещать изображение */
+    top: 15%; /* Расположите на 10% высоты родительского элемента */
+    left: 70%; /* Расположите по центру по горизонтали */
+    transform: rotate(180deg); /* Центрируем по горизонтали и поворачиваем на 180 градусов */
+    width: 30%; /* Установите ширину в процентах для отзывчивости */
+    height: auto; /* Сохраняет пропорции */
+    opacity: 0.5; /* Устанавливает прозрачность */
+    display: block;
+}

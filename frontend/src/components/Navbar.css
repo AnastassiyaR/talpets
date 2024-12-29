@@ -1,0 +1,96 @@
+.navbar {
+  background-color: #ffffff; /* Цвет фона */
+  padding: 10px 20px; /* Отступы */
+  font-family: 'Verdana', sans-serif; /* Применяем шрифт ко всему navbar */
+}
+
+.navbar-container {
+  display: flex;
+  justify-content: space-between; /* Равномерное распределение элементов */
+  align-items: center; /* Вертикальное выравнивание */
+  flex-wrap: wrap; /* Позволяет элементам переноситься */
+}
+
+.navbar-brand {
+  display: flex;
+  color: #000000; /* Цвет текста */
+}
+
+/* Логотип и название бренда */
+.logo {
+  height: 40px; /* Высота логотипа */
+  margin-right: 10px; /* Отступ между логотипом и названием */
+}
+
+.brand-name {
+  font-size: 30px; /* Размер шрифта названия бренда */
+  color: #000000; /* Цвет текста */
+  font-weight: bold; /* Применяем жирный шрифт */
+}
+
+.nav-links {
+  list-style: none; /* Убирает маркеры списка */
+  display: flex; /* Горизонтальное расположение пунктов меню */
+  margin: 0; /* Убирает отступы */
+  padding: 0; /* Убирает внутренние отступы */
+  font-family: 'Verdana', sans-serif; /* Применяем шрифт для ссылок */
+}
+
+.nav-link {
+  color: #000000; /* Цвет текста ссылок */
+  text-decoration: none; /* Убирает подчеркивание */
+  padding: 10px 15px; /* Отступы вокруг ссылок */
+}
+
+.nav-link:hover {
+  color: #0073e6; /* Новый цвет текста при наведении */
+  background-color: rgba(255, 255, 255, 0.2); /* Фоновый цвет при наведении */
+  border-radius: 5px; /* Скругление углов */
+}
+
+.navbar-icons {
+  display: flex; /* Горизонтальное расположение иконок */
+}
+
+.icon-link {
+  margin-left: 15px; /* Отступ между иконками */
+}
+
+.icon {
+  height: 24px; /* Высота иконок */
+}
+
+.icon-link:hover {
+  transform: scale(1.1); /* Легкое увеличение иконки при наведении */
+}
+
+.icon-link:hover .icon {
+  filter: brightness(90) saturate(600%) invert(100%) saturate(6%) hue-rotate(90deg) brightness(10%) contrast(10%);
+}
+
+
+/* Если у вас SVG-иконки, добавьте fill: currentColor */
+.icon {
+  width: 26px;
+  height: 26px;
+  fill: currentColor; /* Использует текущий цвет текста для SVG-иконок */
+}
+
+/* Адаптивность для экранов шириной меньше 768px */
+@media (max-width: 768px) {
+  .brand-name {
+    font-size: 1.5rem;
+    color: #100f0f; /* Основной цвет текста для бренда на маленьких экранах */
+  }
+
+  /* Уменьшение шрифта меню и размещение элементов в столбик */
+  .nav-links .nav-item {
+    margin: 0.5rem 0;
+    font-size: 1.0rem;
+  }
+
+  /* Центрирование иконок */
+  .navbar-icons {
+    justify-content: center;
+  }
+}
